@@ -15,5 +15,5 @@ def portrait(input_path):
     # 合成画像を保存
  
   return portrait_img
-portrait('static\modnet_image\input\\22861417_s.jpg')
+
 
