@@ -15,7 +15,7 @@ from MODNet.src.models.modnet import MODNet
 
 def inference(input_path):
     # define cmd arguments
-    output_path='static\modnet_image\matte'
+    # output_path='static\modnet_image\matte'
     ckpt_path='pretrained\modnet_photographic_portrait_matting.ckpt'
 
 
@@ -23,9 +23,9 @@ def inference(input_path):
     if not os.path.exists(input_path):
         print('Cannot find input path: {0}'.format(input_path))
         exit()
-    if not os.path.exists(output_path):
-        print('Cannot find output path: {0}'.format(output_path))
-        exit()
+    # if not os.path.exists(output_path):
+    #     print('Cannot find output path: {0}'.format(output_path))
+    #     exit()
     if not os.path.exists(ckpt_path):
         print('Cannot find ckpt path: {0}'.format(ckpt_path))
         exit()
