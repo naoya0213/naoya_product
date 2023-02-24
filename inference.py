@@ -3,6 +3,7 @@ import sys
 import argparse
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
@@ -97,5 +98,9 @@ def inference(input_path):
     # resize and save matte
     matte = F.interpolate(matte, size=(im_h, im_w), mode='area')
     matte = matte[0][0].data.cpu().numpy()
-    matte_name = 'matte.png'
-    Image.fromarray(((matte * 255).astype('uint8')), mode='L').save(os.path.join(output_path, matte_name))
+    
+    matte =Image.fromarray(((matte * 255).astype('uint8')), mode='L')
+    return matte
+    # return matte
+    # matte_name = 'matte.jpg'
+    # ).save(os.path.join(output_path, matte_name))
