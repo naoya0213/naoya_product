@@ -27,11 +27,13 @@ def product01():
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_user_files():
     if request.method == 'POST':
-        upload_file = request.files['upload_file']
-        img_path = os.path.join(UPLOAD_FOLDER,upload_file.filename)
-        upload_file.save(img_path)
-        output=portrait(img_path)
-        output.save(portrait_path)
+        # upload_file = request.files['upload_file']
+        img_path = 'C:\Users\81907\Desktop\sample_product\static\modnet_image\input\22861417_s.jpg'# os.path.join(UPLOAD_FOLDER,upload_file.filename)
+        # upload_file.save(img_path)
+        # output=portrait(img_path)
+        # output.save(portrait_path)
+        # OutputImage = '/tmp/output.jpg'
+        # Target.save(OutputImage)
         print(portrait_path)
     return render_template('portrait_result.html',portrait_path=portrait_path)
 
