@@ -29,14 +29,14 @@ def upload_user_files():
         # output.save(portrait_path)
         # print(portrait_path)
         
-        filename = secure_filename(upload_file.filename)
+        f = secure_filename(upload_file.filename)
         path_2_tmp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp")
-        print(os.path.join(path_2_tmp, filename))
+        print(os.path.join(path_2_tmp, f))
         if not os.path.exists(path_2_tmp):
             os.mkdir(path_2_tmp)
-        filename.save(os.path.join(path_2_tmp, filename))
-        return filename
-    return render_template('portrait_result.html',portrait_path=os.path.join(path_2_tmp, filename))
+        f.save(os.path.join(path_2_tmp, f))
+        return f
+    return render_template('portrait_result.html',portrait_path=os.path.join(path_2_tmp, f))
 
 @app.route('/image-upload', methods=['GET', 'POST'])
 def image_post():
