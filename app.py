@@ -8,7 +8,7 @@ from flask import (
 
 
 UPLOAD_FOLDER='./static/modnet_image/input'
-portrait_path='./static/modnet_image/output/portrait.jpg'
+portrait_path='/tmp/portrait.jpg'
 app = Flask(__name__)
 
 @app.route('/')
