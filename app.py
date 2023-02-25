@@ -36,7 +36,7 @@ def upload_user_files():
         # print(os.path.join(path_2_tmp, filename))
         if not os.path.exists(path_2_tmp):
             os.mkdir(path_2_tmp)
-        f.save(os.path.join(path_2_tmp,"input.jpg"))
+        f.save(portrait_path)
         return render_template('portrait_result.html' , portrait_path =portrait_path)
 
 
