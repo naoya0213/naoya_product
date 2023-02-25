@@ -2,7 +2,8 @@ from portrait import portrait
 import os
 from flask import (
      Flask, 
-     request, 
+     request,
+     send_from_directory, 
      render_template)
 
 
@@ -15,7 +16,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
+@app.route('/tmp/<path:filename>')
+def send_file(filename): 
+    return send_from_directory('tmp', filename)
 
 @app.route('/portrait')
 def product01():
