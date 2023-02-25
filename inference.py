@@ -1,6 +1,5 @@
 import os
-import sys
-import argparse
+
 import numpy as np
 from PIL import Image
 
@@ -15,7 +14,7 @@ from MODNet.src.models.modnet import MODNet
 def inference(input_path):
     # define cmd arguments
     # output_path='static\modnet_image\matte'
-    ckpt_path='pretrained\modnet_photographic_portrait_matting.ckpt'
+    ckpt_path=f'./pretrained/modnet_photographic_portrait_matting.ckpt'
 
 
     # check input arguments

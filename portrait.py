@@ -1,5 +1,5 @@
 from PIL import Image
-import matplotlib.pyplot as plt
+
 from composition import background_composition as bg_com
 from inference import inference
 def portrait(input_path):
