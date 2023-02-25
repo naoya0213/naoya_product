@@ -14,7 +14,7 @@ from MODNet.src.models.modnet import MODNet
 
 def inference(input_path):
     # define cmd arguments
-    output_path='tmp'
+    output_path='/tmp/output.jpg'
     ckpt_path='pretrained\modnet_photographic_portrait_matting.ckpt'
 
 
