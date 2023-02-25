@@ -23,7 +23,7 @@ def product01():
 def upload_user_files():
     if request.method == 'POST':
         upload_file = request.files['upload_file']
-        img_path = 'static\modnet_image\input\\22861417_s.jpg'# os.path.join(UPLOAD_FOLDER,upload_file.filename)
+        img_path = os.path.join(UPLOAD_FOLDER,upload_file.filename)
         upload_file.save(img_path)
         output=portrait(img_path)
         output.save(portrait_path)
