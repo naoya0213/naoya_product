@@ -8,3 +8,4 @@ Pillow==9.4.0
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.13.1+cpu
 torchvision==0.14.1
+diffusers==0.13.1
