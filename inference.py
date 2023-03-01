@@ -18,9 +18,9 @@ def inference(input_path):
 
 
     # check input arguments
-    if not os.path.exists(input_path):
-        print('Cannot find input path: {0}'.format(input_path))
-        exit()
+    # if not os.path.exists(input_path):
+    #     print('Cannot find input path: {0}'.format(input_path))
+    #     exit()
     # if not os.path.exists(output_path):
     #     print('Cannot find output path: {0}'.format(output_path))
     #     exit()
